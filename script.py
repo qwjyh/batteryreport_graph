@@ -29,7 +29,7 @@ for tr in trs:
 mat_T = [list(x) for x in zip(*mat)]
 # print(mat_T)
 
-# トリム
+# trim
 dates = []
 for i in range(1, len(mat_T[0])):
   dates.append(re.search('\d+-\d+-\d+', mat_T[0][i]).group())
@@ -46,18 +46,17 @@ df = pd.DataFrame(
    mat_T[1][0] : charge,
    mat_T[2][0] : design}
 )
-print(df.dtypes)
 
 print(df)
-print()
-print(df.dtypes)
-print(df["DATE"][0], type(df["DATE"][0]))
 
 fig, ax = plt.subplots() # create a figure containing a single axes
 ax.plot(df.iloc[:, 0], df.iloc[:, 1], label = df.columns[1])
 ax.plot(df.iloc[:, 0], df.iloc[:, 2], label = df.columns[2])
-ax.set_xlabel("date[Y/M/D]")
+ax.set_xlabel("date")
 ax.set_ylabel("capacity / mWh")
 ax.set_title("Battery capacity history")
 ax.legend()
+# 保存
+plt.savefig("plot.png")
+# 表示
 plt.show()
