@@ -12,7 +12,9 @@ import pandas as pd
 soup = BeautifulSoup(open('battery-report.html', encoding="utf-8"), "lxml")
 
 # battery capacity historyの検索、table要素の取得
-table = soup.find("h2", text=re.compile("Battery capacity history")).next_sibling.next_sibling.next_sibling.next_sibling
+table = soup.find("h2", text=re.compile("Battery capacity history")).next_sibling.next_sibling
+
+# print(table)
 
 # 保存先のリスト
 mat = []
