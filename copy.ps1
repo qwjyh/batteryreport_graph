@@ -1,0 +1,1 @@
+cp ~/battery-report.html ./battery-report.html
