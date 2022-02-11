@@ -1,0 +1,14 @@
+= batteryreport graph
+v0.1. 2022-2-11
+
+:toc: auto
+
+== これは何
+WindowsのBatteryreportのbattery capacity historyをグラフ化するpythonスクリプト
+
+== 更新履歴
+2021後半:: 着想
+2022/2/10:: 着手
+
+== 参考にしたURIリスト(備忘録)
+* Beautifulsoupで改行文字、空白文字をトリムする : https://qiita.com/Chanmoro/items/db51658b073acddea4ac#%E6%94%B9%E8%A1%8C%E7%A9%BA%E7%99%BD%E6%96%87%E5%AD%97%E3%82%92%E3%83%88%E3%83%AA%E3%83%A0%E3%81%99%E3%82%8B
